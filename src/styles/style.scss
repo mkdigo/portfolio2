@@ -1,8 +1,50 @@
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --color-white: #f1f1f1;
+  --color-green: #41b883;
+  --color-dark-green: #369b6e;
+  --color-dark-blue: #35495e;
+}
+
+body {
+  background: var(--color-white);
+  font-size: 16px;
+}
+
+header {
+  position: relative;
+  display: flex;
+
+  margin-bottom: 1rem;
+  
+  h1, strong {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  h1 {
+    background: var(--color-dark-blue);
+    color: #fff;
+    font-size: 2rem;
+  }
+  
+  strong {
+    flex-grow: 1;
+    font-size: 1.5rem;
+    background: var(--color-dark-green);
+  }
+}
+
+h3 {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin-bottom: 1rem;
 }
