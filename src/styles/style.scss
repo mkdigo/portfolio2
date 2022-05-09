@@ -8,7 +8,7 @@
 }
 
 :root {
-  --color-white: #f1f1f1;
+  --color-white: #e0e0e0;
   --color-green: #41b883;
   --color-dark-green: #369b6e;
   --color-dark-blue: #35495e;
@@ -19,32 +19,6 @@ body {
   font-size: 16px;
 }
 
-header {
-  position: relative;
-  display: flex;
-
-  margin-bottom: 1rem;
-  
-  h1, strong {
-    display: flex;
-    align-items: center;
-    padding: 1rem 2rem;
-  }
-  
-  h1 {
-    background: var(--color-dark-blue);
-    color: #fff;
-    font-size: 2rem;
-  }
-  
-  strong {
-    flex-grow: 1;
-    font-size: 1.5rem;
-    background: var(--color-dark-green);
-  }
-}
-
-h3 {
-  text-align: center;
-  margin-bottom: 1rem;
+ul {
+  list-style: none;
 }

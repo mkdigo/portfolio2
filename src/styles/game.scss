@@ -1,6 +1,17 @@
 section.game {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+
+  @media(max-width: 1305px) {
+    display: none;
+  }
+
+  h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
   
   div.console {
     position: relative;
