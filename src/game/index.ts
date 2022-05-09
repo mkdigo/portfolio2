@@ -536,34 +536,30 @@ document.addEventListener('keyup', ({ key }) => {
   }
 });
 
-leftButton?.addEventListener('mousedown', () => {
-  playerKeys.a.pressed = true;
-});
+type TCreateButtonEventProps = {
+  button: Element | null;
+  key: keyof TKeys;
+};
 
-leftButton?.addEventListener('mouseup', () => {
-  playerKeys.a.pressed = false;
-});
+function createButtonEvent({ button, key }: TCreateButtonEventProps) {
+  button?.addEventListener('mousedown', () => {
+    playerKeys[key].pressed = true;
+  });
 
-rightButton?.addEventListener('mousedown', () => {
-  playerKeys.d.pressed = true;
-});
+  button?.addEventListener('mouseup', () => {
+    playerKeys[key].pressed = false;
+  });
 
-rightButton?.addEventListener('mouseup', () => {
-  playerKeys.d.pressed = false;
-});
+  button?.addEventListener('touchstart', () => {
+    playerKeys[key].pressed = true;
+  });
 
-jumpButton?.addEventListener('mousedown', () => {
-  playerKeys.j.pressed = true;
-});
+  button?.addEventListener('touchend', () => {
+    playerKeys[key].pressed = false;
+  });
+}
 
-jumpButton?.addEventListener('mouseup', () => {
-  playerKeys.j.pressed = false;
-});
-
-attackButton?.addEventListener('mousedown', () => {
-  playerKeys.k.pressed = true;
-});
-
-attackButton?.addEventListener('mouseup', () => {
-  playerKeys.k.pressed = false;
-});
+createButtonEvent({ button: leftButton, key: 'a' });
+createButtonEvent({ button: rightButton, key: 'd' });
+createButtonEvent({ button: jumpButton, key: 'j' });
+createButtonEvent({ button: attackButton, key: 'k' });
