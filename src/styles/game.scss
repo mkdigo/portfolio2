@@ -8,9 +8,20 @@ section.game {
     display: none;
   }
 
-  h3 {
-    text-align: center;
-    margin-bottom: 1rem;
+  .instructions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1rem;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 5rem;
+
+    h3 {
+      font-size: 1.4rem;
+      color: var(--color-dark-green);
+    }
   }
   
   div.console {
