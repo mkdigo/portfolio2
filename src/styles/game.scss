@@ -171,4 +171,41 @@ section.game {
       margin-left: 0.15rem;
     }
   }
+
+  .about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+    gap: 2rem;
+    width: 100%;
+    margin: 5rem 0;
+    padding: 5rem 2rem;
+
+    background: var(--color-dark-green);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    
+    div {
+      width: 100%;
+      max-width: 600px;
+      line-height: 2rem;
+
+      strong {
+        display: block;
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+
+      a {
+        color: var(--color-white);
+      }
+
+      ul {
+        list-style: disc;
+        padding-left: 1rem;
+      }
+    }
+
+  }
 }
