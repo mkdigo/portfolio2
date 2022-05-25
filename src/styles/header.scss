@@ -98,7 +98,6 @@ header {
           transition: 0.3s;
           animation: profile-link-animation 6s linear infinite;
           animation-delay: var(--delay);
-          border: solid attr(data-delay) red;
 
           &:hover {
             transform: scale(1.2);
